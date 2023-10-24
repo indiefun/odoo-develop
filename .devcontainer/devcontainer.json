@@ -4,7 +4,7 @@
 	"name": "odoo-develop",
 	"dockerComposeFile": "docker-compose.yml",
 	"service": "odoo",
-	"workspaceFolder": "/workspaces/${localWorkspaceFolderBasename}",
+	"workspaceFolder": "/workspaces",
 
 	// Features to add to the dev container. More info: https://containers.dev/features.
 	"features": {
@@ -16,10 +16,7 @@
 	"forwardPorts": [8069],
 
 	// Use 'postCreateCommand' to run commands after the container is created.
-	"postCreateCommand": [
-		"pip install -r odoo/requirements.txt",
-		"npm install -g rtlcss"
-	],
+	"postCreateCommand": "npm install -g rtlcss",
 
 	// Configure tool-specific properties.
 	// "customizations": {},
