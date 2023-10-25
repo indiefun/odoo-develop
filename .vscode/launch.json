@@ -11,6 +11,7 @@
             "program": "${workspaceFolder}/odoo/odoo-bin",
             "console": "integratedTerminal",
             "args": [
+                "--config=${workspaceFolder}/odoo.conf",
                 "--addons-path=${workspaceFolder}/addons,${workspaceFolder}/odoo/addons,${workspaceFolder}/odoo/odoo/addons",
                 "--db_host=postgres",
                 "--database=odoo",
