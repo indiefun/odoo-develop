@@ -19,6 +19,7 @@
                 "--db_password=odoo",
                 "--db_port=5432",
                 "--init=base",
+                "--load-language=zh_CN",
             ]
         }
     ]
