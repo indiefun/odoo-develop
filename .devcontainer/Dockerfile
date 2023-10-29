@@ -15,10 +15,14 @@ RUN mkdir -p /etc/apt/keyrings \
     && rm -rf /var/lib/apt/lists/*
 RUN npm install --global rtlcss
 
+ARG ODOO_VERSION=16.0
+RUN curl -fsSLO https://raw.githubusercontent.com/odoo/odoo/16.0/requirements.txt \
+    && pip3 install -r requirements.txt \
+    && rm -f requirements.txt
+
 RUN mkdir -p /workspaces && chown vscode:vscode /workspaces
 WORKDIR /workspaces
 USER vscode
 
-ARG ODOO_VERSION=16.0
 RUN git clone -b ${ODOO_VERSION} --single-branch --depth=1 https://github.com/odoo/odoo.git /workspaces/odoo
-RUN pip3 install -r /workspaces/odoo/requirements.txt
+RUN mkdir -p /home/vscode/.ssh && chown vscode:vscode /home/vscode/.ssh
