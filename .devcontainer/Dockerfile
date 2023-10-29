@@ -7,13 +7,6 @@ RUN apt-get update \
     && apt-get install -y ca-certificates curl gnupg \
     && rm -rf /var/lib/apt/lists/*
 
-RUN mkdir -p /workspaces
-WORKDIR /workspaces
-
-ARG ODOO_VERSION=16.0
-RUN git clone -b ${ODOO_VERSION} --single-branch --depth=1 https://github.com/odoo/odoo.git odoo
-RUN pip3 install -r odoo/requirements.txt
-
 ARG NODE_MAJOR=20
 RUN mkdir -p /etc/apt/keyrings \
     && curl -fsSL https://deb.nodesource.com/gpgkey/nodesource-repo.gpg.key | gpg --dearmor -o /etc/apt/keyrings/nodesource.gpg \
@@ -21,3 +14,11 @@ RUN mkdir -p /etc/apt/keyrings \
     && apt-get update && sudo apt-get install -y nodejs \
     && rm -rf /var/lib/apt/lists/*
 RUN npm install --global rtlcss
+
+RUN mkdir -p /workspaces && chown vscode:vscode /workspaces
+WORKDIR /workspaces
+USER vscode
+
+ARG ODOO_VERSION=16.0
+RUN git clone -b ${ODOO_VERSION} --single-branch --depth=1 https://github.com/odoo/odoo.git odoo
+RUN pip3 install -r odoo/requirements.txt
