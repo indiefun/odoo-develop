@@ -11,18 +11,24 @@
 # 用法
 * 克隆本项目
     ```
+    // in shell
     git clone https://github.com/indiefun/odoo-develop.git
-    ```
-* 克隆Odoo项目
-    ```
-    git clone -b 16.0 --single-branch --depth=1 https://github.com/odoo/odoo.git
     ```
 * 使用vscode打开本工程
     ```
+    // in shell
     code odoo-develop
     ```
-* 打开devcontainers环境
-* 直接运行launch启动odoo
+* 使用devcontainer重新打开
+    ```
+    // ctrl+shift+p ->
+    Dev Containers: Reopen in Container
+    ```
+* 运行调试
+    ```
+    // ctrl+shift+p ->
+    Debug: Start Debugging
+    ```
 
 # 问题
 * 启动参数在.vscode/launch.json里面配置

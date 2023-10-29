@@ -1,24 +1,9 @@
-// For format details, see https://aka.ms/devcontainer.json. For config options, see the
-// README at: https://github.com/devcontainers/templates/tree/main/src/postgres
 {
 	"name": "odoo-develop",
 	"dockerComposeFile": "docker-compose.yml",
 	"service": "odoo",
-	"workspaceFolder": "/workspaces/odoo",
-
-	// Features to add to the dev container. More info: https://containers.dev/features.
+	"workspaceFolder": "/workspaces",
 	"features": {},
-
-	// Use 'forwardPorts' to make a list of ports inside the container available locally.
-	// This can be used to network with other containers or the host.
 	"forwardPorts": [8069],
-
-	// Use 'postCreateCommand' to run commands after the container is created.
-	// "postCreateCommand": "",
-
-	// Configure tool-specific properties.
-	// "customizations": {},
-
-	// Uncomment to connect as root instead. More info: https://aka.ms/dev-containers-non-root.
 	"remoteUser": "vscode"
 }
