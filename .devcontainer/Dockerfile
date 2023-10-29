@@ -15,9 +15,19 @@ RUN mkdir -p /etc/apt/keyrings \
     && rm -rf /var/lib/apt/lists/*
 RUN npm install --global rtlcss
 
-RUN mkdir -p /workspaces && chown vscode:vscode /workspaces
-WORKDIR /workspaces
+RUN printf ' \n\
+    IdentityFile /ssh/id_rsa \n\
+    IdentityFile /ssh/id_dsa \n\
+    IdentityFile /ssh/id_ecdsa \n\
+    IdentityFile /ssh/id_ed25519 \n\
+    IdentityFile ~/.ssh/id_rsa \n\
+    IdentityFile ~/.ssh/id_dsa \n\
+    IdentityFile ~/.ssh/id_ecdsa \n\
+    IdentityFile ~/.ssh/id_ed25519 ' >> /etc/ssh/sshd_config
+
 USER vscode
+RUN mkdir -p /home/vscode/workspaces
+WORKDIR /home/vscode/workspaces
 
 ARG ODOO_VERSION=16.0
 RUN git clone -b ${ODOO_VERSION} --single-branch --depth=1 https://github.com/odoo/odoo.git odoo
