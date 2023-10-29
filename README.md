@@ -29,6 +29,9 @@
     // ctrl+shift+p ->
     Debug: Start Debugging
     ```
+    > 初次运行时选择初始化base数据库和语言选项
+
+    > 后续运行时直接回车默认选项即可
 
 # 问题
 * 启动参数在.vscode/launch.json里面配置

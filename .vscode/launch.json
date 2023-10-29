@@ -11,15 +11,29 @@
             "program": "${workspaceFolder}/odoo/odoo-bin",
             "console": "integratedTerminal",
             "args": [
-                "--addons-path=${workspaceFolder}/odoo/addons,${workspaceFolder}/odoo/odoo/addons",
+                "--addons-path=${workspaceFolder}/odoo/addons",
                 "--db_host=postgres",
                 "--database=odoo",
                 "--db_user=odoo",
                 "--db_password=odoo",
                 "--db_port=5432",
-                "--init=base",
-                "--load-language=zh_CN",
+                "--init=${input:init}",
+                "--load-language=${input:lang}"
             ]
+        }
+    ],
+    "inputs": [
+        {
+            "id": "init",
+            "type": "pickString",
+            "description": "which database should be init ?",
+            "options": [ "", "base" ]
+        },
+        {
+            "id": "lang",
+            "type": "pickString",
+            "description": "which language should be load ?",
+            "options": [ "", "zh_CN" ]
         }
     ]
 }
