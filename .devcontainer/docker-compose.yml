@@ -8,8 +8,6 @@ services:
     volumes:
       - ../.devcontainer:/workspaces/.devcontainer
       - ../.vscode:/workspaces/.vscode
-      - ~/.gitconfig:/etc/gitconfig
-      - ~/.ssh/id_rsa:/ssh/id_rsa
     command: sleep infinity
     network_mode: service:postgres
 
