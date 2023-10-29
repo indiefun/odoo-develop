@@ -25,4 +25,3 @@ WORKDIR /workspaces
 USER vscode
 
 RUN git clone -b ${ODOO_VERSION} --single-branch --depth=1 https://github.com/odoo/odoo.git /workspaces/odoo
-RUN mkdir -p /home/vscode/.ssh && chown vscode:vscode /home/vscode/.ssh
