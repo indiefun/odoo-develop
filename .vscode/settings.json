@@ -1,0 +1,6 @@
+{
+    "search.exclude": {
+        "**/*.po": true,
+        "**/*.pot": true
+    }
+}

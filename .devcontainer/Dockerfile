@@ -16,7 +16,7 @@ RUN mkdir -p /etc/apt/keyrings \
 RUN npm install --global rtlcss
 
 ARG ODOO_VERSION=16.0
-RUN curl -fsSLO https://raw.githubusercontent.com/odoo/odoo/16.0/requirements.txt \
+RUN curl -fsSLO https://raw.githubusercontent.com/odoo/odoo/${ODOO_VERSION}/requirements.txt \
     && pip3 install -r requirements.txt \
     && rm -f requirements.txt
 

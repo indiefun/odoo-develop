@@ -4,10 +4,10 @@
 	"service": "odoo",
 	"workspaceFolder": "/workspaces",
 	"features": {},
-	"forwardPorts": [8069],
 	"customizations": {
 		"vscode": {
 			"extensions": [
+				"Codeium.codeium",
 				"ms-python.python"
 			]
 		}
