@@ -9,7 +9,15 @@
 			"extensions": [
 				"Codeium.codeium",
 				"ms-python.python"
-			]
+			],
+			"settings": {
+				"terminal.integrated.defaultProfile.linux": "zsh",
+				"terminal.integrated.profiles.linux": {
+					"zsh": {
+						"path": "zsh"
+					}
+				} 
+			}
 		}
 	},
 	"remoteUser": "vscode"

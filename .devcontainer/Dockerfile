@@ -21,4 +21,5 @@ RUN curl -fsSLO https://raw.githubusercontent.com/odoo/odoo/${ODOO_VERSION}/requ
     && rm -f requirements.txt
 
 RUN apt-get update \
-    && apt-get install -y postgresql-client
+    && apt-get install -y postgresql-client \
+    && rm -rf /var/lib/apt/lists/*
