@@ -36,3 +36,6 @@
 # 问题
 * 启动参数在.vscode/launch.json里面配置
 * 不支持GitHub codespace，目录映射与本机开发不一样，看不到odoo目录
+
+
+git clone -b 16.0 --single-branch --depth=1 https://github.com/odoo/odoo.git odoo

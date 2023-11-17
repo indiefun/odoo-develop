@@ -20,8 +20,5 @@ RUN curl -fsSLO https://raw.githubusercontent.com/odoo/odoo/${ODOO_VERSION}/requ
     && pip3 install -r requirements.txt \
     && rm -f requirements.txt
 
-RUN mkdir -p /workspaces && chown vscode:vscode /workspaces
-WORKDIR /workspaces
-USER vscode
-
-RUN git clone -b ${ODOO_VERSION} --single-branch --depth=1 https://github.com/odoo/odoo.git /workspaces/odoo
+RUN apt-get update \
+    && apt-get install -y postgresql-client

@@ -2,7 +2,7 @@
 	"name": "odoo-develop",
 	"dockerComposeFile": "docker-compose.yml",
 	"service": "odoo",
-	"workspaceFolder": "/workspaces",
+	"workspaceFolder": "/workspaces/${localWorkspaceFolderBasename}",
 	"features": {},
 	"customizations": {
 		"vscode": {
