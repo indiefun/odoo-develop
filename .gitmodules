@@ -1,4 +1,4 @@
 [submodule "odoo"]
 	path = odoo
-	url = ./odoo
+	url = git@github.com:indiefun/odoo-develop.git/odoo
 	branch = 16.0
