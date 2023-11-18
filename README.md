@@ -14,6 +14,11 @@
     // in shell
     git clone https://github.com/indiefun/odoo-develop.git
     ```
+* 克隆odoo
+    ```
+    // in shell
+    git clone -b 16.0 --single-branch --depth=1 https://github.com/odoo/odoo.git odoo
+    ```
 * 使用vscode打开本工程
     ```
     // in shell
@@ -36,6 +41,4 @@
 # 问题
 * 启动参数在.vscode/launch.json里面配置
 * 不支持GitHub codespace，目录映射与本机开发不一样，看不到odoo目录
-
-
-git clone -b 16.0 --single-branch --depth=1 https://github.com/odoo/odoo.git odoo
+* 本来想将odoo作为submodule加repo的，但是没办法只拉去16.0 branch，只能用gitignore+clone的方法了
