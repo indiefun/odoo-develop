@@ -12,7 +12,7 @@
             "console": "integratedTerminal",
             "args": [
                 "--addons-path=${workspaceFolder}/odoo/addons",
-                "--db_host=postgres",
+                "--db_host=localhost",
                 "--database=odoo",
                 "--db_user=odoo",
                 "--db_password=odoo",
