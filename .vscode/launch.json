@@ -17,8 +17,7 @@
                 "--db_user=odoo",
                 "--db_password=odoo",
                 "--db_port=5432",
-                "--init=${input:init}",
-                "--load-language=${input:lang}"
+                "--init=${input:init}"
             ]
         }
     ],
@@ -28,12 +27,6 @@
             "type": "pickString",
             "description": "which database should be init ?",
             "options": [ "", "base" ]
-        },
-        {
-            "id": "lang",
-            "type": "pickString",
-            "description": "which language should be load ?",
-            "options": [ "", "zh_CN" ]
         }
     ]
 }
