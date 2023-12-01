@@ -3,5 +3,23 @@
         "**/*.po": true,
         "**/*.pot": true
     },
-    "search.useIgnoreFiles": false
+    "search.useIgnoreFiles": false,
+    "python.analysis.extraPaths": [
+        "odoo",
+        "odoo/addons",
+    ],
+    "python.autoComplete.extraPaths": [
+        "odoo",
+        "odoo/addons",
+    ],
+    "pylint.args": [
+        "--disable=unused-argument",
+        "--disable=line-too-long",
+        "--disable=wrong-import-order",
+        "--disable=protected-access",
+        "--disable=missing-module-docstring",
+        "--disable=missing-class-docstring",
+        "--disable=missing-function-docstring",
+        "--disable=missing-final-newline",
+    ]
 }
